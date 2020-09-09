@@ -1,5 +1,3 @@
-Hi Hello
-How are you
-
-event is great
-Bye!.
+Testing The b0t...
+Hey! I'm Wautomsg-b0t
+I'm a Mass WhatsApp Messaging b0t!
