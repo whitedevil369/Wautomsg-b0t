@@ -136,6 +136,108 @@ time.sleep(3)
 pyautogui.typewrite('Test Message')
 pyautogui.press('enter')
 #positions
+pos_x = 1229	# value of x in positionfinder.py
+pos_y = 781	# value of y in positionfinder.py
+#THIS IS FOR 1600x900 RESOLUTION, VALUES MAY CHANGE ACCORDING TO YOUR PCs RESOLUTION. (use positionfinder.py tool to find your mouse position)
+#Change These Values Before Executing
+i=0
+try:
+	for number in phone:
+		time.sleep(2)
+		pyautogui.typewrite('Wa.me/'+number)
+		pyautogui.press('enter')
+		position = pos_x,pos_y	
+		pyautogui.click(position)
+		time.sleep(2)
+		#pyautogui.typewrite('Write Something')
+		#br() #Use This to go to new line without sending the message 
+		for m in msg:
+			pyautogui.typewrite(m)	
+		pyautogui.typewrite(message)	
+		pyautogui.press('enter')
+		time.sleep(1)
+		pyautogui.press('tab')
+		pyautogui.press('tab')		
+		pyautogui.typewrite(sender_ph)
+		pyautogui.press('enter')
+		pyautogui.press('esc')
+		time.sleep(2)
+		pyautogui.press('esc')
+		i=i+1
+		print ("Message has been sent to "+str(i)+" of "+str(counter)+" Recipients")
+	pyautogui.typewrite("Messages Sent Successfully!")
+	br()
+	pyautogui.typewrite("Thank-You! See You Next Time.")
+	br() 
+	pyautogui.typewrite("Good Bye!")	
+	pyautogui.press('enter')
+	print ("\nMessages Sent Successfully!")
+	print("\nHOPE THIS TOOL HELPED YOU!\nTHANKS FOR USING THIS TOOL.")
+
+except:
+	print("\nProcess Terminating...")
+	msg_file.close()
+	phone_file.close()
+	exit()
+	if p and (p.isdigit() or '\n' in p): 
+		counter += 1
+	else:
+		print("PHONE NUMBERS SHOULD CONTAIN ONLY DIGITS")
+		exit_timer()
+		exit()
+
+
+print ("\nENTER YOUR MODE OF MESSAGING (cli/file): ")
+print ("cli to enter Message in the terminal.\nfile to import the location of the file")
+c = raw_input("\nb0t:~#> ")
+print("\n")
+
+if c=='file':
+	print ("\nENTER THE SOURCE LOCATION OF THE MESSAGE: ")
+	print ("Eg. /root/Desktop/samplemsg.txt\nIf it exists in the same dirctory of the file then,\nEg. samplemsg.txt")
+	loc = raw_input("\nb0t:~#> ")
+	if not loc.endswith('.txt'):
+		print("ONLY .txt FILE FORMAT IS ACCEPTED")
+		exit_timer()		
+		exit()
+	try:
+		msg_file=open(loc)
+		msg=msg_file.readlines()
+		message=''
+	except:
+		print("FILE DOESN'T EXIST!")
+		exit_timer()		
+		exit()
+
+elif c=='cli':
+	print ("\nENTER THE MESSAGE: ")
+	print ("Ctrl+D to end the input")
+	print ("\nb0t:~#> ")
+	message=sys.stdin.read()
+	msg=''
+	m=''
+
+else:
+	print("INVALID CHOICE!")
+	exit_timer()
+	exit()
+
+print("\nYou have 5 seconds to switch to WhatsApp.....")
+time.sleep(5)
+print("Switch to WhatsApp, Your running out of time...\n")
+alert()
+pyautogui.typewrite('Wa.me/'+sender_ph)
+pyautogui.press('enter')
+position = 1229,781
+pyautogui.click(position)
+time.sleep(2)	
+pyautogui.press('esc')
+time.sleep(2)
+pyautogui.press('esc')
+time.sleep(3)
+pyautogui.typewrite('Test Message')
+pyautogui.press('enter')
+#positions
 pos_x = 1229
 pos_y = 781
 #THIS IS FOR 1600x900 RESOLUTION, VALUES MAY CHANGE ACCORDING TO YOUR PCs RESOLUTION. (use positionfinder.py tool to find your mouse position)
