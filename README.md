@@ -30,7 +30,7 @@ cd Wautomsg-b0t/ <br /><br />
 
 <b>Python version: 3:<br /></b>
 python3 -m pip install -r requirements.txt <br /><br />
-If it's not working, then, try <br />
+If it's not working, then try, <br />
 pip install -r requirements.txt
 
 <b>Python version: 2:<br /></b>
