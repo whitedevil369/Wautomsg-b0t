@@ -77,7 +77,10 @@ if not src.endswith('.txt'):
 
 counter=0
 for p in phone: 
-	if p and (p.isdigit() or '\n' in p): 
+	x=p.split('\n')
+	p=x[0]
+	print(p)
+	if p and p.isdigit(): 
 		counter += 1
 	else:
 		print("PHONE NUMBERS SHOULD CONTAIN ONLY DIGITS")
@@ -129,13 +132,11 @@ pyautogui.typewrite('Wa.me/'+sender_ph)
 pyautogui.press('enter')
 position = 1229,781
 pyautogui.click(position)
-time.sleep(2)	
+pyautogui.typewrite('Test Message')
+pyautogui.press('enter')	
 pyautogui.press('esc')
 time.sleep(2)
 pyautogui.press('esc')
-time.sleep(3)
-pyautogui.typewrite('Test Message')
-pyautogui.press('enter')
 #positions
 pos_x = 1229	# value of x in positionfinder.py
 pos_y = 781	# value of y in positionfinder.py
