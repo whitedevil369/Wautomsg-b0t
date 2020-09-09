@@ -2,8 +2,8 @@
 Easy to use, Whatsapp Web Mass/Bulk Messaging b0t (without saving the numbers in contacts, No APIs, No Additional Downloads required)
 
 # Compatibility
-Tested and Works on Debian based Linux, Windows and MAC OS, etc. <br />
-Works on Browsers like Google Chrome, Firefox, Safari, etc. <br />
+Tested and Works on Debian based Linux, Windows and (MAC OS (yet to be tested)), etc. <br />
+Works on Browsers like Google Chrome, Firefox, (Safari(yet to be tested)), etc. <br />
 
 # Setup
 1. Install WhatsApp Application on your mobile phone (iOS/Android/Any) (If you don't have) <br />
@@ -15,7 +15,7 @@ and you will be Redirected to your WhatsApp Chatbox, To keep the chat alive, jus
 6. Go to Your Chatbox (Your Phone Number) and Now your good to go.
 
 # Requirements
-<b>git:<br /></b>
+<b>git (for git clone method):<br /></b>
 Click This <a href="https://git-scm.com/downloads">Link</a> for Downloading & This <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Link</a> for Installation. <br />
 For Debian based Linux, <br /> 
 $ sudo apt-get install git <br /><br />
@@ -23,13 +23,14 @@ $ sudo apt-get install git <br /><br />
 Click This <a href="https://www.python.org/downloads/">Link</a> for Downloading Python & Installing pip
   
 # Installation
+You can either Download the zip file and extract it or
 Open your Terminal and type the following: <br />
 git clone https://github.com/whitedevil369/Wautomsg-b0t.git <br />
 cd Wautomsg-b0t/ <br />
 pip install -r requirements.txt 
 
 # Usage
-To find the mouse pointer Position, place your mouse pointer on the text of latest/recent message from the WhatsApp chatbox (Eg. place your mouse pointer on the text of  "Hi" message which was entered earlier during the setup phase) <br />
+To find the mouse pointer Position, place your mouse pointer on the text of latest/recent message from the WhatsApp chatbox (Eg. place your mouse pointer on the text of "Hi" message which was entered earlier during the setup phase) <br />
 Now execute this program through your terminal. <br />
 python positionfinder.py <br /><br />
 It will Print the values of x and y positions of your mouse pointer. (Eg. Point(x=1229, y=781)). Note down these values. <br />
@@ -40,16 +41,16 @@ python Wautomsg-b0t.py <br /><br />
 1. Enter your WhatsApp Phone Number <br />
 2. Import the file containing Phone Number List in .txt file format <br />
 3. Enter the mode of Messaging (importing from file (or) input the message in terminal/cli) <br />
-4. Now Enter the Message or else Import the File containing the Message to be sent according to the mode. <br />
+4. Now Type the Message and Press Enter then Ctrl+D or else Import the File containing the Message to be sent according to the mode. <br />
 5. Press Enter To Start the b0t and Switch to logged in WhatsApp Web, and make sure that the cursor is in your chat. <br />
 6. Don't do anything until the b0t completes the execution, When It Completes, You will be notified through WhatsApp as well as in Terminal. <br />
 
 # Additional Information
 b0t can send upto 5 messages per minute. If the b0t is slow, you can remove/reduce the values of time.sleep() function. <br />
-b0t has many time.sleep() function just to avoid accounts from getting banned by WhatsApp for sending too many Requests. <br />
+b0t has time.sleep() function just to avoid accounts from getting banned by WhatsApp for sending too many Requests. <br />
 b0t nicely handles most of the scenarios like even if the account doesn't exist in WhatsApp, It escapes the alert and continue with other existing accounts. <br /><br />
-If you have any issue/If you find any bug, Feel free to open an issues thread/Pull Request. <br />
-If this tool helped you, and you like it, Do Star the repo.
+If you have any issues/If you find any bugs, Feel free to open an issues thread/Pull Request. <br />
+If you like this tool and if it helped you, Please Do Star the repo.
 
 # Limitation
 You can not use your PC for any other purpose/multitask during the execution of the tool. 
