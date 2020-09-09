@@ -140,7 +140,7 @@ pos_x = 1229
 pos_y = 781
 #THIS IS FOR 1600x900 RESOLUTION, VALUES MAY CHANGE ACCORDING TO YOUR PCs RESOLUTION. (use positionfinder.py tool to find your mouse position)
 #Change These Values Before Executing
-
+i=0
 try:
 	for number in phone:
 		time.sleep(3)
@@ -165,7 +165,6 @@ try:
 		pyautogui.typewrite(sender_ph)
 		pyautogui.press('enter')
 		time.sleep(3)
-		i=0
 		i=i+1
 		print ("Message has been sent to "+str(i)+" of "+str(counter)+" Recipients")
 	print ("\nMessages Sent Successfully!")
