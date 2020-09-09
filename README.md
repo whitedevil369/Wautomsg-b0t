@@ -26,8 +26,15 @@ Click This <a href="https://www.python.org/downloads/">Link</a> for Downloading 
 You can either Download the zip file and extract it or
 Open your Terminal and type the following: <br />
 git clone https://github.com/whitedevil369/Wautomsg-b0t.git <br />
-cd Wautomsg-b0t/ <br />
-pip install -r requirements.txt 
+cd Wautomsg-b0t/ <br /><br />
+
+<b>Python version: 3:<br /></b>
+python3 -m pip install -r requirements.txt <br /><br />
+If it's not working, then, try <br />
+pip install -r requirements.txt
+
+<b>Python version: 2:<br /></b>
+pip install -r requirements.txt
 
 # Usage
 To find the mouse pointer Position, place your mouse pointer on the text of latest/recent message from the WhatsApp chatbox (Eg. place your mouse pointer on the text of "Hi" message which was entered earlier during the setup phase) <br />
