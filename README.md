@@ -51,6 +51,9 @@ b0t nicely handles most of the scenarios like even if the account doesn't exist 
 If you have any issue/If you find any bug, Feel free to open an issues thread/Pull Request. <br />
 If this tool helped you, and you like it, Do Star the repo.
 
+# Limitation
+You can not use your PC for any other purpose/multitask during the execution of the tool. 
+
 # Disclaimer
 <b>This tool is made only for constructive purposes with a good intention, Please Use this tool Responsibly and don't try to Message bomb or Spam any unknown people.</b> <br />
 Feel free to fork/publish this tool, but just make sure that you give credits to @whitedevil369 or Poornesh Adhithya.
