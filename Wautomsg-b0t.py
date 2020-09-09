@@ -79,7 +79,6 @@ counter=0
 for p in phone: 
 	x=p.split('\n')
 	p=x[0]
-	print(p)
 	if p and p.isdigit(): 
 		counter += 1
 	else:
