@@ -176,6 +176,7 @@ try:
 		pyautogui.press('enter')
 		i=i+1
 		print ("Message has been sent to "+str(i)+" of "+str(counter)+" Recipients")
+	time.sleep(2)
 	pyautogui.typewrite("Messages Sent Successfully!")
 	br()
 	pyautogui.typewrite("Thank-You! See You Next Time.")
