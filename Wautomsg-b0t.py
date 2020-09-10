@@ -146,6 +146,7 @@ pyautogui.press('enter')
 pyautogui.press('esc')
 time.sleep(2)
 pyautogui.press('esc')
+time.sleep(1)
 pyautogui.press('esc')
 
 i=0
@@ -170,6 +171,7 @@ try:
 		pyautogui.press('esc')
 		time.sleep(2)
 		pyautogui.press('esc')
+		time.sleep(1)
 		pyautogui.press('esc')
 		i=i+1
 		print ("Message has been sent to "+str(i)+" of "+str(counter)+" Recipients")
