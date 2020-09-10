@@ -153,8 +153,7 @@ try:
 	for number in phone:
 		time.sleep(2)
 		pyautogui.typewrite('Wa.me/'+number)
-		pyautogui.press('enter')
-		position = pos_x,pos_y	
+		pyautogui.press('enter')	
 		pyautogui.click(position)
 		time.sleep(2)
 		#pyautogui.typewrite('Write Something')
