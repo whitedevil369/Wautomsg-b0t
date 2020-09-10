@@ -143,6 +143,7 @@ pyautogui.press('enter')
 position = pos_x,pos_y
 pyautogui.click(position)
 pyautogui.typewrite('Test Message')
+time.sleep(1)
 pyautogui.press('enter')
 time.sleep(1)
 pyautogui.press('esc')
@@ -163,7 +164,8 @@ try:
 		#br() #Use This to go to new line without sending the message 
 		for m in msg:
 			pyautogui.typewrite(m)	
-		pyautogui.typewrite(message)	
+		pyautogui.typewrite(message)
+		time.sleep(1)
 		pyautogui.press('enter')
 		time.sleep(3)
 		pyautogui.press('tab')
