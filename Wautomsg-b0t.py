@@ -122,6 +122,16 @@ else:
 	exit_timer()
 	exit()
 
+#<----------------------------------------------------->
+
+#positions
+pos_x = 1229	# value of x in positionfinder.py
+pos_y = 781	# value of y in positionfinder.py
+#THIS IS FOR 1600x900 RESOLUTION, VALUES MAY CHANGE ACCORDING TO YOUR PCs RESOLUTION. (use positionfinder.py tool to find your mouse position)
+#Change These Values Before Executing
+
+#<----------------------------------------------------->
+
 input("\nPRESS Enter To Start The b0t and then Switch to WhatsApp Web.\n\nb0t:~#> ")
 print("\nYou have 5 seconds to switch to WhatsApp Web.....")
 time.sleep(5)
@@ -129,18 +139,15 @@ print("Switch to WhatsApp Web, Your running out of time...\n")
 alert()
 pyautogui.typewrite('Wa.me/'+sender_ph)
 pyautogui.press('enter')
-position = 1229,781
+position = pos_x,pos_y
 pyautogui.click(position)
 pyautogui.typewrite('Test Message')
 pyautogui.press('enter')	
 pyautogui.press('esc')
 time.sleep(2)
 pyautogui.press('esc')
-#positions
-pos_x = 1229	# value of x in positionfinder.py
-pos_y = 781	# value of y in positionfinder.py
-#THIS IS FOR 1600x900 RESOLUTION, VALUES MAY CHANGE ACCORDING TO YOUR PCs RESOLUTION. (use positionfinder.py tool to find your mouse position)
-#Change These Values Before Executing
+pyautogui.press('esc')
+
 i=0
 try:
 	for number in phone:
@@ -163,6 +170,7 @@ try:
 		pyautogui.press('enter')
 		pyautogui.press('esc')
 		time.sleep(2)
+		pyautogui.press('esc')
 		pyautogui.press('esc')
 		i=i+1
 		print ("Message has been sent to "+str(i)+" of "+str(counter)+" Recipients")
