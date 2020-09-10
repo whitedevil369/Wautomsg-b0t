@@ -137,7 +137,7 @@ print("\nYou have 5 seconds to switch to WhatsApp Web.....")
 time.sleep(5)
 print("Switch to WhatsApp Web, Your running out of time...\n")
 alert()
-timpe.sleep(1)
+time.sleep(1)
 pyautogui.typewrite('Wa.me/'+sender_ph)
 pyautogui.press('enter')
 position = pos_x,pos_y
