@@ -142,15 +142,13 @@ pyautogui.typewrite('Wa.me/'+sender_ph)
 pyautogui.press('enter')
 position = pos_x,pos_y
 pyautogui.click(position)
-pyautogui.typewrite('Test Message')
-time.sleep(1)
-pyautogui.press('enter')
 time.sleep(1)
 pyautogui.press('esc')
 time.sleep(2)
 pyautogui.press('esc')
 time.sleep(1)
-pyautogui.press('esc')
+pyautogui.typewrite('Test Message')
+pyautogui.press('enter')
 
 i=0
 try:
@@ -159,7 +157,11 @@ try:
 		pyautogui.typewrite('Wa.me/'+number)
 		pyautogui.press('enter')	
 		pyautogui.click(position)
+		time.sleep(1)
+		pyautogui.press('esc')
 		time.sleep(2)
+		pyautogui.press('esc')
+		time.sleep(1)
 		#pyautogui.typewrite('Write Something')
 		#br() #Use This to go to new line without sending the message 
 		for m in msg:
@@ -172,12 +174,6 @@ try:
 		pyautogui.press('tab')		
 		pyautogui.typewrite(sender_ph)
 		pyautogui.press('enter')
-		time.sleep(1)
-		pyautogui.press('esc')
-		time.sleep(2)
-		pyautogui.press('esc')
-		time.sleep(2)
-		pyautogui.press('esc')
 		i=i+1
 		print ("Message has been sent to "+str(i)+" of "+str(counter)+" Recipients")
 	pyautogui.typewrite("Messages Sent Successfully!")
