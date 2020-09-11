@@ -37,20 +37,15 @@ pip install -r requirements.txt
 pip install -r requirements.txt
 
 # Usage
-To find the mouse pointer Position, place your mouse pointer on the text of latest/recent message from the WhatsApp chatbox (Eg. place your mouse pointer on the text of "Hi" message which was entered earlier during the setup phase) <br />
-Now execute this program through your terminal. <br />
-python positionfinder.py <br /><br />
-It will Print the values of x and y positions of your mouse pointer. (Eg. Point(x=1229, y=781)). Note down these values. <br />
-Open the Wautomsg-b0t using any (editor/notepad) and then find (Ctrl+F) pos_x and pos_y and change the existing positions to the noted position accordingly. <br />
-Save this file. <br /><br />
-Now to run the program Type the following in your terminal, <br />
+To run the program Type the following in your terminal, <br />
 python Wautomsg-b0t.py <br /><br />
-1. Enter your WhatsApp Phone Number <br />
-2. Import the file containing Phone Number List in .txt file format <br />
-3. Enter the mode of Messaging (importing from file (or) input the message in terminal/cli) <br />
-4. Now Type the Message and Press Enter then Ctrl+D or else Import the File containing the Message to be sent according to the mode. <br />
-5. Press Enter To Start the b0t and Switch to logged in WhatsApp Web, and make sure that the cursor is in your chat. <br />
-6. Don't do anything until the b0t completes the execution, When It Completes, You will be notified through WhatsApp as well as in Terminal. <br />
+1. Place your mouse pointer on the text of latest/recent message from the WhatsApp chatbox and click on it. <br />
+2. Enter your WhatsApp Phone Number. <br />
+3. Import the file containing Phone Number List in .txt file format <br />
+4. Enter the mode of Messaging (importing from file (or) input the message in terminal/cli) <br />
+5. Now Type the Message and Press Enter then Ctrl+D or else Import the File containing the Message to be sent according to the mode. <br />
+6. Press Enter To Start the b0t and Switch to logged in WhatsApp Web, and make sure that the cursor is in your chat. <br />
+7. Don't do anything until the b0t completes the execution, When It Completes, You will be notified through WhatsApp as well as in Terminal. <br />
 
 # Additional Information
 b0t can send upto 5 messages per minute. If the b0t is slow, you can remove/reduce the values of time.sleep() function. <br />
@@ -64,4 +59,5 @@ You can not use your PC for any other purpose/multitask during the execution of 
 
 # Disclaimer
 <b>This tool is made only for constructive purposes with a good intention, Please Use this tool Responsibly and don't try to Message bomb or Spam any unknown people.</b> <br />
-Feel free to fork/publish this tool, but just make sure that you give credits to @whitedevil369 or Poornesh Adhithya.
+Feel free to fork/publish this tool, but just make sure that you give credits to @whitedevil369 or Poornesh Adhithya.<br />
+Improvements by @kaushik0x7d2 ( Kaushik Kachireddy ).
