@@ -148,8 +148,8 @@ with Listener(
 #<----------------------------------------------------->
 
 #positions
-pos_x = 1229	(for safety, clear this) # value of x in positionfinder.py
-pos_y = 781	(for safety, clear this) # value of y in positionfinder.py
+pos_x = 1229	# value of x in positionfinder.py
+pos_y = 781	# value of y in positionfinder.py
 #THIS IS FOR 1600x900 RESOLUTION, VALUES MAY CHANGE ACCORDING TO YOUR PCs RESOLUTION. (use positionfinder.py tool to find your mouse position)
 #Change These Values Before Executing
 
