@@ -3,18 +3,8 @@ import time
 import sys
 from pyfiglet import Figlet
 #from positionfinder import positions
-from pynput.mouse import Listener          #NEW
+#from pynput.mouse import Listener          
 
-
-def on_click(x, y, button, pressed):       #NEW
-	if pressed:
-		global pos_x
-		pos_x = x
-		
-		global pos_y
-		pos_y = y
-	if not pressed:
-		return False
 
 def br():
 	pyautogui.hotkey('shift', 'enter')
@@ -43,6 +33,18 @@ def alert():
 		cl=cl-1
 	print("b0t STARTED...")	
 
+'''
+def on_click(x, y, button, pressed):       
+	if pressed:
+		global pos_x
+		pos_x = x
+		
+		global pos_y
+		pos_y = y
+	if not pressed:
+		return False
+'''
+
 def home():
 	f1 = Figlet(font='rounded')
 	f2 = Figlet(font='digital')
@@ -51,22 +53,11 @@ def home():
 	print ("@whitedevil369")
 	print (f1.renderText('Wautomsg-b0t'))
 	print (f2.renderText("Made by Poornesh Adhithya"))
-	print ("Improvements by Kaushik Kachireddy")                              #NEW
 	print ("\nWELCOME TO Wautomsg-b0t\nWautomsg-b0t is a WHATSAPP MASS/BULK MESSAGE SENDER\n(WITHOUT SAVING THE PHONE NUMBERS IN CONTACTS)\n")
 	input("\nPRESS ENTER TO CONTINUE.\n\nb0t:~#> ")
 
 home()
-print("Place your mouse pointer on the text of latest/recent message from the WhatsApp chatbox and click on it")   
-print("(Eg. place your mouse pointer on the text of 'Hi' message which was entered earlier during the setup phase)")
-input("\nPRESS ENTER TO CONTINUE.\n\nb0t:~#> ")
-print("CLICK AFTER 5 SECONDS")
-time.sleep(5)
-pos_x = 0
-pos_y = 0                                                                                                                          #NEW
-with Listener(
-        on_click=on_click,
-        ) as listener:
-    listener.join()
+
 print ("\nENTER SENDER PHONE NUMBER: ")
 print ("format: <country_code><phone_number> (without + or 00 or spaces)")
 print ("Eg. 911234567890\nWhere 91 is the Counry Code and 1234567890 is phone number")
@@ -144,6 +135,25 @@ else:
 	print("INVALID CHOICE!")
 	exit_timer()
 	exit()
+'''
+print("Place your mouse pointer on the text of latest/recent message from the WhatsApp chatbox and click on it")   
+print("(Eg. place your mouse pointer on the text of 'Hi' message which was entered earlier during the setup phase)")
+input("\nPRESS ENTER AND THEN CLICK THE MESSAGE. AFTER CLICKING IT PRESS ENTER AGAIN! (MAKE SURE TO CLICK AFTER 3 Seconds)\n\nb0t:~#> ")
+
+with Listener(
+        on_click=on_click,
+        ) as listener:
+    listener.join()
+'''
+#<----------------------------------------------------->
+
+#positions
+pos_x = 1229	(for safety, clear this) # value of x in positionfinder.py
+pos_y = 781	(for safety, clear this) # value of y in positionfinder.py
+#THIS IS FOR 1600x900 RESOLUTION, VALUES MAY CHANGE ACCORDING TO YOUR PCs RESOLUTION. (use positionfinder.py tool to find your mouse position)
+#Change These Values Before Executing
+
+#<----------------------------------------------------->
 
 input("\nPRESS Enter To Start The b0t and then Switch to WhatsApp Web.\n\nb0t:~#> ")
 print("\nYou have 5 seconds to switch to WhatsApp Web.....")
