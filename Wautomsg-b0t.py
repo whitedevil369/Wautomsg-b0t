@@ -60,7 +60,7 @@ home()
 
 print ("\nENTER SENDER PHONE NUMBER: ")
 print ("format: <country_code><phone_number> (without + or 00 or spaces)")
-print ("Eg. 911234567890\nWhere 91 is the Counry Code and 1234567890 is phone number")
+print ("Eg. 911234567890\nWhere 91 is the Country Code and 1234567890 is phone number")
 sender_ph = input("\nb0t:~#> ")
 print("\n")
 
