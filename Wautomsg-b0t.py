@@ -2,8 +2,18 @@ import pyautogui
 import time
 import sys
 from pyfiglet import Figlet
+import argparse
 #from positionfinder import positions
 #from pynput.mouse import Listener          
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-s","--senderNumber", help="Enter your whatsapp number in the format <country_code><your_number> without starting with +/0 and without any spaces in between")
+parser.add_argument("-r","--recipientFile", help="Enter the path of the .txt file containing the list of recipient phone numbers in the same format as the sender number")
+parser.add_argument("-m","--mode", help="Set the mode of entry of the messege (file/cli)")
+parser.add_argument("-f","--fileMessege", help="enter the path of file containing the messege")
+args = parser.parse_args()
+
 
 
 def br():
@@ -58,28 +68,33 @@ def home():
 
 home()
 
-print ("\nENTER SENDER PHONE NUMBER: ")
-print ("format: <country_code><phone_number> (without + or 00 or spaces)")
-print ("Eg. 911234567890\nWhere 91 is the Country Code and 1234567890 is phone number")
-sender_ph = input("\nb0t:~#> ")
-print("\n")
+if(args.senderNumber==None):
+	print ("\nENTER SENDER PHONE NUMBER: ")
+	print ("format: <country_code><phone_number> (without + or 00 or spaces)")
+	print ("Eg. 911234567890\nWhere 91 is the Country Code and 1234567890 is phone number")
+	sender_ph = input("\nb0t:~#> ")
+	print("\n")
+else:
+    sender_ph = args.senderNumber
+
 
 if not sender_ph.isdigit() or '\n' in sender_ph:
 	print("PHONE NUMBER SHOULD CONTAIN ONLY DIGITS")
 	exit_timer()
 	exit()
-
-print ("\nENTER THE SOURCE LOCATION OF THE PHONE NUMBERS LIST: ")
-print ("Eg. /root/Desktop/contacts.txt\nIf it exists in the same dirctory of the file then,\nEg. contacts.txt")
-src = input("\nb0t:~#> ")
-print("\n")
-
+if(args.recipientFile==None):
+	print ("\nENTER THE SOURCE LOCATION OF THE PHONE NUMBERS LIST: ")
+	print ("Eg. /root/Desktop/contacts.txt\nIf it exists in the same dirctory of the file then,\nEg. contacts.txt")
+	src = input("\nb0t:~#> ")
+	print("\n")
+else:
+    src = args.recipientFile
 try:
 	phone_file=open(src)
 	phone=phone_file.readlines()
 
 except:
-	print("FILE DOESN'T EXIST!")
+	print("RECIPIENT FILE DOESN'T EXIST!")
 	exit_timer()		
 	exit()
 
@@ -100,16 +115,20 @@ for p in phone:
 		exit_timer()
 		exit()
 
-
-print ("\nENTER YOUR MODE OF MESSAGING (cli/file): ")
-print ("cli to enter Message in the terminal.\nfile to import the location of the file")
-c = input("\nb0t:~#> ")
-print("\n")
-
+if(args.mode == None):
+	print ("\nENTER YOUR MODE OF MESSAGING (cli/file): ")
+	print ("cli to enter Message in the terminal.\nfile to import the location of the file")
+	c = input("\nb0t:~#> ")
+	print("\n")
+else:
+    c = args.mode
 if c=='file':
-	print ("\nENTER THE SOURCE LOCATION OF THE MESSAGE: ")
-	print ("Eg. /root/Desktop/samplemsg.txt\nIf it exists in the same dirctory of the file then,\nEg. samplemsg.txt")
-	loc = input("\nb0t:~#> ")
+	if(args.fileMessege==None):
+		print ("\nENTER THE SOURCE LOCATION OF THE MESSAGE: ")
+		print ("Eg. /root/Desktop/samplemsg.txt\nIf it exists in the same dirctory of the file then,\nEg. samplemsg.txt")
+		loc = input("\nb0t:~#> ")
+	else:
+		loc = args.fileMessege
 	if not loc.endswith('.txt'):
 		print("ONLY .txt FILE FORMAT IS ACCEPTED")
 		exit_timer()		
@@ -148,8 +167,8 @@ with Listener(
 #<----------------------------------------------------->
 
 #positions
-pos_x = 1229	# value of x in positionfinder.py
-pos_y = 781	# value of y in positionfinder.py
+pos_x = 1441	# value of x in positionfinder.py
+pos_y = 959	# value of y in positionfinder.py
 #THIS IS FOR 1600x900 RESOLUTION, VALUES MAY CHANGE ACCORDING TO YOUR PCs RESOLUTION. (use positionfinder.py tool to find your mouse position)
 #Change These Values Before Executing
 
