@@ -43,7 +43,10 @@ python positionfinder.py <br /><br />
 It will Print the values of x and y positions of your mouse pointer. (Eg. Point(x=1229, y=781)). Note down these values. <br />
 Open the Wautomsg-b0t using any (editor/notepad) and then find (Ctrl+F) pos_x and pos_y and change the existing positions to the noted position accordingly. <br />
 Save this file. <br /><br />
-To run the program Type the following in your terminal, <br />
+You can either parse arguements directly along with the command or enter the parameters using the command line wizard.<br />
+to understand how to parse arguements directly use <br />
+python Wautomsg-b0t.py --help<br /><br />
+To run the program using the CLI wizard Type the following in your terminal, <br />
 python Wautomsg-b0t.py <br /><br />
 1. Enter your WhatsApp Phone Number <br />
 2. Import the file containing Phone Number List in .txt file format <br />
